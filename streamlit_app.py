@@ -1,6 +1,7 @@
 # Import python packages
 import streamlit as st
 from snowflake.snowpark.functions import col
+import requests
 cnx = st.connection ("snowflake")
 session = cnx.session ()
 
@@ -44,10 +45,6 @@ if ingredients_list:
         #st.success ('Your Smoothie is ordered',name_on_order, icon="✅" )
         
         st.success (f"✅ Your Smoothie is ordered, {name_on_order}!" )
-
-#New section to display smoothiefroot nutrition information
-#st.text(smoothiefroot_response.json())
-import requests
 
 
 
